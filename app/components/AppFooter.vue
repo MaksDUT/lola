@@ -51,12 +51,11 @@ function onSubmit() {
 
 <template>
   <USeparator
-    icon="i-simple-icons-nuxtdotjs"
     class="h-px"
   />
 
   <UFooter :ui="{ top: 'border-b border-default' }">
-    <template #top>
+   <!--  <template #top>
       <UContainer>
         <UFooterColumns :columns="columns">
           <template #right>
@@ -86,39 +85,39 @@ function onSubmit() {
           </template>
         </UFooterColumns>
       </UContainer>
-    </template>
+    </template> -->
 
     <template #left>
       <p class="text-muted text-sm">
-        Built with Nuxt UI • © {{ new Date().getFullYear() }}
+        Près d'ailleurs • © {{ new Date().getFullYear() }} - Tous droits réservés
       </p>
     </template>
 
     <template #right>
       <UButton
-        to="https://go.nuxt.com/discord"
+        to="https://www.facebook.com/share/1BBPqMHara/"
         target="_blank"
-        icon="i-simple-icons-discord"
-        aria-label="Nuxt on Discord"
+        icon="i-simple-icons-facebook"
+        aria-label="Facebook"
         color="neutral"
         variant="ghost"
       />
       <UButton
-        to="https://go.nuxt.com/x"
+        to="https://www.instagram.com/pres.dailleurs"
         target="_blank"
-        icon="i-simple-icons-x"
+        icon="i-simple-icons-instagram"
         aria-label="Nuxt on X"
         color="neutral"
         variant="ghost"
       />
-      <UButton
+      <!-- <UButton
         to="https://github.com/nuxt-ui-templates/saas"
         target="_blank"
-        icon="i-simple-icons-github"
+        icon="i-simple-icons-linkedin"
         aria-label="Nuxt UI on GitHub"
         color="neutral"
         variant="ghost"
-      />
+      /> -->
     </template>
   </UFooter>
 </template>

@@ -2,13 +2,30 @@
 const route = useRoute()
 
 const items = computed(() => [{
-  label: 'Docs',
-  to: '/docs',
+  label: 'Accueil',
+  to: '/',
   active: route.path.startsWith('/docs')
 }, {
-  label: 'Pricing',
+  label: 'Formules',
   to: '/pricing'
-}, {
+},
+
+{
+  label: 'Découvrez-nous',
+  to: '/blog'
+},
+
+{
+  label: 'FAQ',
+  to: '/blog'
+},
+
+{
+  label: 'Contact',
+  to: '/blog'
+},
+
+{
   label: 'Blog',
   to: '/blog'
 }, {
@@ -34,7 +51,7 @@ const items = computed(() => [{
     <template #right>
       <UColorModeButton />
 
-      <UButton
+<!--       <UButton
         icon="i-lucide-log-in"
         color="neutral"
         variant="ghost"
@@ -56,7 +73,7 @@ const items = computed(() => [{
         trailing-icon="i-lucide-arrow-right"
         class="hidden lg:inline-flex"
         to="/signup"
-      />
+      /> -->
     </template>
 
     <template #body>
