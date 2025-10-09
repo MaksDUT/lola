@@ -108,6 +108,23 @@ export const collections = {
       })
     })
   }),
+
+  faq: defineCollection({
+    source: '5.faq.yml',
+    type: 'page',
+    schema: z.object({
+      faq: createBaseSchema().extend({
+        items: z.array(
+          z.object({
+            label: z.string().nonempty(),
+            content: z.string().nonempty()
+          })
+        )
+      })
+    })
+  }),
+
+
   blog: defineCollection({
     source: '3.blog.yml',
     type: 'page'

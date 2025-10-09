@@ -1,0 +1,36 @@
+title: A plan for every need
+description: Our plans are designed to meet the requirements of both beginners and players. Get the right plan that suits you.
+seo:
+  title: Faq
+  description: Foire Aux Question 
+faq:
+  title: Foire Aux Question
+  description: Les questions les plus fréquentes.
+  items:
+    - label: Qu’est-ce qu’un travel planner ?
+      content: Un travel planner est un conseiller spécialisé dans l’organisation de voyages sur mesure. Il construit un itinéraire adapté à vos envies, votre budget et vos contraintes.
+    - label: Quelle est la différence avec une agence de voyage ?
+      content: "L’agence vend directement des séjours « packagés ». Le travel planner conçoit et planifie votre voyage, puis vous réservez vous-même vos prestations via des liens fiables. Résultat : plus de flexibilité et souvent des économies."
+    - label: "Est-ce que ça coûte plus cher ?"
+      content: "Non : le service est souvent plus abordable qu’une agence. Vous payez des frais de conception (étude du projet, recherches, conseils), mais les réservations sont faites à votre nom, sans commission cachée."
+    - label: "Comment ça fonctionne concrètement ?"
+      content: "
+            1. Nous échangeons sur votre projet lors d'un premier appel totalement gartuit. <br>
+            2. Nous étudions votre projet et vous recevez votre devis. <br>
+            3. Nous nous occupons de préparer votre voyage sur mesure. <br>
+            4. Une fois le projet validé, il ne vous reste plus qu'à faire vos réservations (accompagnement en option). <br>
+            5. Vous recevez votre carnet de voyage. <br>
+            6. Il ne vous reste qu'à faire vos valises !"
+    - label: Qui fait les réservations ?
+      content: "Vous ! Le travel planner fournit des liens directs et sécurisés vers les prestataires (hôtels, vols, activités), pour une totale transparence."
+    - label: Est-ce adapté à tous les types de voyageurs ?
+      content: "Oui ! Le service est 100% personnalisable et personnalisé !<br>
+        Que vous soyez un couple en city-trip à Londres.<br>                            
+        Une famille en vacances en Bretagne.<br>                            
+        Un backpacker/une backpackeuse en road trip en Indonésie.<br>                            
+        Ou même une entreprise.<br>"
+    - label: Quels sont les avantages principaux ?
+      content: "✔ Gain de temps : plus besoin de passer des heures sur Google.<br>                              
+        ✔ Personnalisation : un voyage vraiment à votre image.<br>                              
+        ✔ Économies : pas de commissions d’agence.<br>                              
+        ✔ Passion : nous nous occupons de votre projet comme si c'était le nôtre."
