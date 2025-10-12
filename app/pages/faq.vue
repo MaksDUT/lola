@@ -18,13 +18,18 @@ defineOgImageComponent('Saas')
 <template>
   <div v-if="page">
 
-    <UPageSection :title="page.faq.title" :description="page.faq.description">
+    <div class="pt-16 max-w-3xl mx-auto text-center mb-10">
+      <h2 class="text-3xl font-bold mb-4">{{ page.faq.title }}</h2>
+      <p class="text-lg">{{ page.faq.description }}</p>
+    </div>
+    <UPageSection>
+
       <UAccordion :items="page.faq.items" :unmount-on-hide="false" :default-value="['0']" type="multiple"
         class="max-w-3xl mx-auto" :ui="{
           trigger: 'text-base text-highlighted',
           body: 'text-base text-muted'
         }">
-        <template #body="{ item }" >
+        <template #body="{ item }">
           <div v-html="item.content">
           </div>
         </template>

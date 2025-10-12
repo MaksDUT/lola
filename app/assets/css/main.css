@@ -17,6 +17,27 @@
   --color-green-800: #016538;
   --color-green-900: #0A5331;
   --color-green-950: #052E16;
+
+
+  --color-lola-50: #EFFDF5;
+  --color-lola-100: #D9FBE8;
+  --color-lola-200: #B3F5D1;
+  --color-lola-300: #75EDAE;
+  --color-lola-400: #00DC82;
+  --color-lola-500: #00C16A;
+  --color-lola-600: #00A155;
+  --color-lola-700: #007F45;
+  --color-lola-800: #016538;
+  --color-lola-900: #0A5331;
+  --color-lola-950: #052E16;
+
+  --color-lola-bg-1: #D8CFC4;
+  --color-lola-bg-2: #A3B18A;
+
+  
+}
+body {
+  --ui-bg-nav: var(--color-lola-bg-1)
 }
 
 .dark {

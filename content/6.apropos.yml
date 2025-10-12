@@ -1,0 +1,53 @@
+title: Qui sommes nous ? 
+description: 
+seo:
+  title: a propos
+  description: Fqui sommes nous
+lola1:
+  title: Hey! Moi c'est Lola
+  description: j'ai 26 ans et je suis passionnée de voyage. Je travaille dans les télécommunications entant que cheffe de projet. Dans la vie, j'aime passer du temps avec mes proches, écouter de la musique, lire, faire du sport mais surtout partir à la découverte de notre planète. 
+  image:
+    src: "/img/apropos/lolaindex.jpg"
+    alt: "Lola"
+lola2:
+  title: 
+  description: "J'aime partir à l'autre bout du monde, découvrir de nouveaux pays, de nouvelles cultures, mais je prends aussi du temps pour visiter mon pays, la France et nos pays voisins. J'ai la chance d'avoir pu visiter une vingtaine de pays dont certains plusieurs fois comme les Emirats Arabes Unis (Dubaï et Abou Dhabi), l'Albanie (Tirana) ou encore le Portugal (Lisbonne). Mes pays coup de coeur sont l'Islande et le Népal. J'ai d'ailleurs le projet d'y retourner en 2026 et en 2027."
+  image:
+    src: "/img/apropos/lola1.jpg"
+    alt: "Népal - 2023 - Trek de Mohare Danda"
+lola3:
+  title: 
+  description: "Le plus souvent c'est moi qui organise les voyages, que ça soit avec ma famille, mes amis ou mon compagnon. Faire mes propres recherches, comparatifs, créer l'itinéraire qui nous convient, me renseigner sur le pays, trouver les meilleurs prix et offres. Puis de temps en temps, certains amis me demandent un coup de main pour trouver un hébergement, un vol, alors je les aide. Et puis un jour je me suis dis et si je me lançais ? Si je concrétisais ce projet de devenir Travel Planner, afin de mettre à disposition mes compétences et mes tips pour partager mes bons plans aux autres. Alors, je me suis lancée et j'ai embarqué dans l'aventure Anthony, l'un de mes amis...."
+  image1:
+    src: "/img/apropos/lola2.jpg"
+    alt: "Islande - 2016 - Glacier de Klofajokull"
+  image2:
+    src: "/img/apropos/lola3.jpg"
+    alt: "Lituanie - 2022 - Ville de Trakai"
+
+anthony:
+  title: "Hello , et moi c'est Anthony."
+  description: "J’ai 32 ans et j’ai quitté la vie parisienne pour venir m’installer dans la belle région de la Drôme. Je travaille en tant que conseiller en systèmes d’informations chez Carrefour, un métier qui me passionne et qui me permet d’allier rigueur et curiosité. "
+  diapo:
+    - src: "/img/apropos/antho1.jpg"
+      alt: "Chypre - 2022 - Ville de Paphos"
+    - src: "/img/apropos/antho2.jpg"
+      alt: "Equateur - 2024 - Mirador de Indichuris"
+    - src: "/img/apropos/antho3.jpg"
+      alt: "Pays Bas - 2023 - Ville d'Amsterdam"
+  text_apres_diapo_1: "Dans la vie, j’aime bouger ! Je suis fan de cinéma, de foot, de sport et de musique. Mais ce qui me fait vibrer par-dessus tout, c’est voyager. J’ai découvert le plaisir des voyages en 2010, et depuis, je n’ai plus jamais arrêté. J’ai eu la chance de visiter de nombreux pays : Portugal, Equateur, Norvège, Egypte, Qatar, Bali… et je suis loin d’avoir fini !"
+  text_apres_diapo_2: "Parmis toutes ces destinations, mes coups de coeur sont, sans hésiter:"
+  drapeaux:
+    - src: "/img/apropos/Flag_of_Ecuador.svg.png"
+      alt: "Equateur"
+    - src: "/img/apropos/Flag_of_Egypt.svg.png"
+      alt: "Egypte"
+    - src: "/img/apropos/Flag_of_Italy.svg.png"
+      alt: "Italie"
+  text_apres_drapeau_1: "Côté organisation, c’est souvent moi qui planifie tout de A à Z, parfois mes amis s’en chargent mais le plus souvent nous organisons nos voyages ensemble. Il arrive aussi que mes proches me demandent des bons plans, astuces ou des conseils pour leurs séjours… et c’est toujours un plaisir de partager cela avec eux. J’aime rendre service et je crois sincèrement que les voyages sont faits pour être partagés. "
+  text_apres_drapeau_2: "C’est d’ailleurs en parlant avec Lola, amie de longue date et passionnée de voyages que l’idée à pris forme. Aujourd’hui, nous avons décidé de nous lancer ensemble dans l’aventure du travel planning, afin de mettre notre passion, nos expériences et nos conseils au service de tous ceux qui rêvent d’explorer le monde. "
+  lien: 
+    description: "Cette aventure, c’est aussi la vôtre ! Alors prêts à embarquer avec nous ?"
+    lien: "/formules"
+    boutton: "Découvrez nos services"
+    icon: "i-lucide-arrow-right"

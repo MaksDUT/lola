@@ -124,11 +124,64 @@ export const collections = {
     })
   }),
 
+  apropos: defineCollection({
+    source: '6.apropos.yml',
+    type: 'page',
+    schema: z.object({
+      lola1: createBaseSchema().extend({
+        image: z.object({
+          src: z.string().nonempty(),
+          alt: z.string().optional()
+        }),
+      }),
 
-  blog: defineCollection({
-    source: '3.blog.yml',
-    type: 'page'
+      lola2: createBaseSchema().extend({
+        image: z.object({
+          src: z.string().nonempty(),
+          alt: z.string().optional()
+        }),
+      }),
+      lola3: createBaseSchema().extend({
+        image1: z.object({
+          src: z.string().nonempty(),
+          alt: z.string().optional()
+        }),
+        image2: z.object({
+          src: z.string().nonempty(),
+          alt: z.string().optional()
+        }),
+      }),
+
+      anthony: createBaseSchema().extend({
+        diapo: z.array(
+          z.object({
+            src: z.string().nonempty(),
+            alt: z.string().optional()
+          })),
+        text_apres_diapo_1: z.string().nonempty(),
+        text_apres_diapo_2: z.string().nonempty(),
+        drapeaux: z.array(
+          z.object({
+            src: z.string().nonempty(),
+            alt: z.string().optional()
+          })),
+        text_apres_drapeau_1: z.string().nonempty(),
+        text_apres_drapeau_2: z.string().nonempty(),
+        lien: z.object({
+          description: z.string().nonempty(),
+          lien: z.string().nonempty(),
+          boutton: z.string().nonempty(),
+          icon: z.string().optional().editor({ input: 'icon' }),
+        })
+
+      })
+    })
   }),
+
+blog: defineCollection({
+  source: '3.blog.yml',
+  type: 'page'
+}),
   posts: defineCollection({
     source: '3.blog/**/*',
     type: 'page',
@@ -145,18 +198,18 @@ export const collections = {
       badge: z.object({ label: z.string().nonempty() })
     })
   }),
-  changelog: defineCollection({
-    source: '4.changelog.yml',
-    type: 'page'
-  }),
-  versions: defineCollection({
-    source: '4.changelog/**/*',
-    type: 'page',
-    schema: z.object({
-      title: z.string().nonempty(),
-      description: z.string(),
-      date: z.date(),
-      image: z.string()
-    })
-  })
+    changelog: defineCollection({
+      source: '4.changelog.yml',
+      type: 'page'
+    }),
+      versions: defineCollection({
+        source: '4.changelog/**/*',
+        type: 'page',
+        schema: z.object({
+          title: z.string().nonempty(),
+          description: z.string(),
+          date: z.date(),
+          image: z.string()
+        })
+      })
 }

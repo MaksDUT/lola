@@ -11,7 +11,7 @@ const items = computed(() => [{
 
 {
   label: 'Découvrez-nous',
-  to: '/blog'
+  to: '/a-propos'
 },
 
 {
@@ -31,7 +31,7 @@ const items = computed(() => [{
 </script>
 
 <template>
-  <UHeader>
+  <UHeader class="ui-bg-nav">
     <template #left>
       <NuxtLink to="/">
         <AppLogo class="w-auto h-6 shrink-0" />
