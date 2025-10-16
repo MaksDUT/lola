@@ -4,78 +4,58 @@ const route = useRoute()
 const items = computed(() => [{
   label: 'Accueil',
   to: '/',
+
 }, {
   label: 'Formules',
-  to: '/pricing'
+  to: '/formules',
+
 },
 
 {
   label: 'Découvrez-nous',
-  to: '/a-propos'
+  to: '/a-propos',
+  class: ""
 },
 
 {
   label: 'FAQ',
-  to: '/faq'
+  to: '/faq',
+
 },
 
 {
   label: 'Contact',
-  to: '/contact'
+  to: '/contact',
+
 },
 
 {
   label: 'Blog',
-  to: '/blog'
-}])
+  to: '/blog',
+},
+
+{
+  label: '',
+  icon: 'i-lucide-calendar',
+  to: '/rdv',
+}
+
+])
 </script>
 
 <template>
-  <UHeader class="ui-bg-nav">
+  <UHeader class="ui-bg-nav bg-[#D8CFC4] text-black">
     <template #left>
       <NuxtLink to="/">
-        <AppLogo class="w-auto h-6 shrink-0" />
+        <AppLogo class="w-auto h-6 shrink-0 text-black text-lg" />
       </NuxtLink>
 
     </template>
 
-    <UNavigationMenu :items="items" variant="link" />
-
-    <template #right>
-      <UColorModeButton />
-
-      <!--       <UButton
-        icon="i-lucide-log-in"
-        color="neutral"
-        variant="ghost"
-        to="/login"
-        class="lg:hidden"
-      />
-
-      <UButton
-        label="Sign in"
-        color="neutral"
-        variant="outline"
-        to="/login"
-        class="hidden lg:inline-flex"
-      />
-
-      <UButton
-        label="Sign up"
-        color="neutral"
-        trailing-icon="i-lucide-arrow-right"
-        class="hidden lg:inline-flex"
-        to="/signup"
-      /> -->
-    </template>
+    <UNavigationMenu :items="items" variant="pill" color="secondary" class="text-xl text-black"  />
 
     <template #body>
-      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
-
-      <USeparator class="my-6" />
-
-      <UButton label="Sign in" color="neutral" variant="subtle" to="/login" block class="mb-3" />
-      <UButton label="Sign up" color="neutral" to="/signup" block />
+      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5 text-3xl" />
     </template>
   </UHeader>
 </template>

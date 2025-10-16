@@ -21,14 +21,6 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
 <template>
 
   <!-- Contact Form -->
-
-
-
-
-
-
-
-
   <section id="contact" class="py-16 bg-base-200">
     <div class="max-w-3xl mx-auto text-center mb-10">
       <h2 class="text-3xl font-bold mb-4">Contactez-nous</h2>
@@ -39,7 +31,6 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
 
 
       <UCard>
-
         <form class="space-y-4" action="https://formsubmit.co/58ee976116bb0fe50bf54efc20dd8976" method="POST">
           <div class="field padding-bottom--24">
             <input type="text" placeholder="Votre nom" class="input input-bordered w-full bg-white" required

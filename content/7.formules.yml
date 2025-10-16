@@ -1,0 +1,96 @@
+title: Nos Formules 
+description: Découvrez nos différentes formules et choisissez celle qui vous convient le mieux ! 
+seo:
+  title: Nos Formules
+  description: Découvrez nos différentes formules et choisissez celle qui vous convient le mieux ! 
+
+form:  
+  formules:
+    - title: "L'échappée"
+      description: "Pour un petit break"
+      id: "echappee"
+      price: "20€"
+      image: "/img/formules/echappée.jpg"
+      link: "/formules/echappee"
+      features: 
+        - "2 à 4 jours"
+        - "1 lieu : France ou Europe"
+        - "4 personnes maximum"
+
+    - title: "Grande échappée"
+      description: "Pour une semaine hors du quotidien"
+      id: "grande-echappee"
+      price: "20€"
+      image: "/img/formules/grandeechappée.jpg"
+      link: "/formules/grande-echappee"
+      features: 
+        - "5 à 7 jours"
+        - "1 lieu : France ou Europe"
+        - "4 personnes maximum"
+    
+    - title: "Horizon"
+      description: "Pour ceux qui veulent en voir un peu plus"
+      id: "horizon"
+      price: "20€"
+      image: "/img/formules/horizon.jpg"
+      link: "/formules/horizon"
+
+      features: 
+        - "5 à 7 jours"
+        - "2 lieux : France ou Europe"
+        - "4 personnes maximum"
+    
+    - title: "Lointains horizons"
+      description: "Pour ceux qui veulent aller plus loin"
+      id: "lointain-horizon"
+      price: "20€"
+      image: "/img/formules/lointainshorizons.jpg"
+      link: "/formules/lointain-horizon"
+
+      features: 
+        - "5 à 7 jours"
+        - "2 lieux : France ou Europe"
+        - "4 personnes maximum"
+      
+    - title: "Aventure"
+      description: "Deux semaines pour s’évader"
+      id: "aventure"
+      price: "20€"
+      image: "/img/formules/aventure.jpg"
+      link: "/formules/aventure"
+
+      features: 
+        - "14 à 16 jours"
+        - "1 ou 2 lieux : France ou Europe"
+        - "4 personnes maximum"
+      
+    
+    - title: "Grande aventure"
+      description: "Deux semaines pour changer de monde"
+      id: "grande-aventure"
+      price: "20€"
+      image: "/img/formules/grandeaventure.jpg"
+      link: "/formules/grande-aventure"
+
+      features: 
+        - "14 à 16 jours"
+        - "1 ou 2 lieux : hors Europe"
+        - "4 personnes maximum"
+
+    - title: "A la carte"
+      description: "Sur devis"
+      id: "a-la-carte"
+      price: "20€"
+      image: "/img/formules/alacarte.jpg"
+      link: "/formules/a-la-carte"
+
+      features: 
+    
+    - title: "En option"
+      description: "Pour se faire plaisir ou en cas de besoin "
+      id: "en-option"
+      price: "20€"
+      image: "/img/formules/enoption.jpg"
+      link: "/formules/en-option"
+
+      features: 

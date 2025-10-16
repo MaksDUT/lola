@@ -1,0 +1,21 @@
+title: "L'échappée"
+description: "Pour un petit break"
+
+formule:
+  title: "L'échappée"
+  description: "L'échappée, c’est la parenthèse idéale pour souffler et se déconnecter. Offrez-vous 2 à 4 jours de liberté pour un break parfait pour 4 personnes maximum, sans stress, juste le plaisir de s’évader."
+  id: "echappee"
+  price: "20€"
+  
+  image: 
+    src: "/img/formules/echappée.jpg"
+
+  link: "/formules/"
+  features: 
+    - "Appel personnalisé de 30 minutes"
+    - "1 lieu en France ou en Europe"
+    - "Moyen de transport (avion/train/bus)"
+    - "2 propositions d'hébergements"
+    - "Jusqu'à 3 propositions d'activités, lieux d'intérêts"
+    - "Informations pratiques (visa, administratif, budget, santé, check-list)"
+    - "Carnet de voyage au format PDF"

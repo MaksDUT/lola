@@ -1,75 +1,147 @@
-title: Ship Your [SaaS]{class="text-primary"} at light speed
-description: Build production-ready SaaS applications with Nuxt UI's powerful components, authentication flows, and enterprise features. The same component library trusted by the entire Nuxt ecosystem.
+title: Qui sommes-nous ?
+description: Nous c'est Lola & Anthony. Amis depuis plusieurs années, nous nous sommes rencontrés durant nos études suppérieures. Nous sommes tous les deux passionnés de voyages, d'aventures et de découvertes. 
 seo:
-  title: Nuxt UI SaaS Template
-  description: Create stunning, fast and production-ready SaaS applications with Nuxt UI. 100+ Vue components, authentication, dark mode, and enterprise features built on Tailwind CSS.
+  title: Près d'ailleurs
+  description: Nous c'est Lola & Anthony. Amis depuis plusieurs années, nous nous sommes rencontrés durant nos études suppérieures. Nous sommes tous les deux passionnés de voyages, d'aventures et de découvertes.
 navigation: false
 hero:
   links:
-    - label: Get started
+    - label: Nous connaitre
       icon: i-lucide-arrow-right
       trailing: true
-      to: https://ui.nuxt.com/docs/getting-started/installation/nuxt
-      target: _blank
+      to: "/a-propos"
       size: xl
-    - label: Use this template
-      icon: i-simple-icons-github
-      size: xl
-      color: neutral
-      variant: subtle
-      to: https://github.com/nuxt-ui-templates/saas
-      target: _blank
+  lola:
+    titre: Lola
+    src: "/img/apropos/lolaindex.jpg"
+  anthony:
+    titre: Anthony
+    src: "/img/apropos/anthoindex.jpg"
+
+
+
+
 sections:
-  - title: Powered by Nuxt UI Components
-    description: Access the complete Nuxt UI component library with 100+ beautifully styled, accessible, and customizable Vue components. Everything you need to build professional SaaS applications.
+  - title: Pourquoi faire appel à nous ?
+    description: Préparer un voyage, c’est excitant… mais cela prend du temps, de l'énergie et parfois cela devient un casse-tête...entre les recherches interminables (vols, hébergements...), les comparaisons de prix, les avis contradictoires et les petits détails qu’on ne veut pas rater, cela peut vite devenir une source de stress. C’est là que nous intervenons ! Notre rôle de travel planner est justement de vous libérer de cette charge pour que vous retrouviez le plaisir de voyager dès la préparation.
     id: features
+    orientation: vertical
+  
+  
+  - title: Concrètement, que faisons-nous pour vous ?
+    description: 
     orientation: horizontal
-    features:
-      - name: 100+ UI Components
-        description: From buttons to modals, data tables to forms - all styled with Tailwind CSS and accessible out of the box.
-        icon: i-lucide-package
-      - name: Authentication Ready
-        description: Pre-built login, signup, and password reset flows. Just connect your backend and start onboarding users.
-        icon: i-lucide-shield
-      - name: TypeScript First
-        description: Full TypeScript support with auto-completion, type safety, and IntelliSense for every component and composable.
-        icon: i-lucide-code-2
-  - title: Built for Modern SaaS
-    description: Everything you need to launch and scale your SaaS. From beautiful marketing pages to complex dashboards, ship faster with production-ready patterns.
-    orientation: horizontal
+    image: "/img/c5.jpg"
     reverse: true
     features:
-      - name: Edge Performance
-        description: Optimized for Core Web Vitals with automatic code splitting, lazy loading, and SSR/SSG support.
+      - name: Temps
+        description: "Nous prenons le temps d’échanger avec vous pour cerner vos envies, vos habitudes de voyage et votre budget."
         icon: i-lucide-zap
-      - name: Dark Mode Ready
-        description: Automatic theme switching with smooth transitions. Respects system preferences and remembers user choice.
+      - name: Recherche
+        description: "Nous faisons pour vous le travail de recherche : hébergements, transports, activités, bonnes adresses locales, astuces pratiques."
         icon: i-lucide-moon
-      - name: Global Ready
-        description: Built-in i18n support for 50+ languages with RTL/LTR layouts and @nuxt/fonts integration.
+      - name: Itinéraire
+        description: "Nous construisons un itinéraire 100 % personnalisé, clair et détaillé, qui s’adapte à votre rythme et à vos priorités."
         icon: i-lucide-globe
+      - name: Options
+        description: "Nous vous proposons toujours plusieurs options, pour que vous gardiez la liberté de choisir et de réserver par vous-même."
+        icon: i-lucide-globe
+
+  - title: Les avantages
+    description: 
+    orientation: horizontal
+    image: "/img/c5.jpg"
+    reverse: false
+    features:
+      - name: Gain de temps
+        description: "Un gain de temps énorme : fini les soirées passées à éplucher les comparateurs et les blogs."
+        icon: i-lucide-zap
+      - name: Recherche
+        description: "Un voyage sur-mesure : pas de programme standardisé, tout est pensé pour vous et selon vous."
+        icon: i-lucide-moon
+      - name: Itinéraire
+        description: "De la sérénité : nous avons déjà filtré et validé les meilleures alternatives pour que vous puissiez avancer en toute confiance."
+        icon: i-lucide-globe
+      - name: Options
+        description: "La maîtrise de votre budget : vous payez uniquement votre formules (honoraires de planification) et vous réservez ensuite directement vos prestations sans intermédiaires ni commissions cachées."
+        icon: i-lucide-globe
+  
+valeurs:
+    title: Nos valeurs
+    description: "Cliquez sur chacune de nos valeurs pour en savoir plus."
+    orientation: vertical
+    reverse: false
+    valeurs:
+      - title: La passion
+        description: "Nous sommes passionnées par notre métier et par les voyages."
+        flip: false
+      - title: La transparence
+        description: "Nous garantissons une relation claire et honnête. Pas de frais cachés."
+        flip: false
+      - title: Le partage
+        description: "Nous partageons avec vous tips, bonnes adresses et recommandations."
+        flip: false
+      - title: La confiance
+        description: "Nous nous occupons de l'organisation de votre voyage comme s'il s'agissait du nôtre."
+        flip: false
+      - title: La personnalisation
+        description: "Notre objectif : vous concevoir un voyage sur mesure, adapté à vos envies et votre budget."
+        flip: false
+      - title: La sérénité
+        description: "Nous simplifions votre oganisation pour que vous profitiez pleinement de votre voyage."
+        flip: false
+delais:
+  title: "Nos délais"
+  delais:
+  - title: "Appel de découverte"
+    date: 
+    description: 
+    icon: i-lucide-phone
+  - title: Envoi du devis
+    date: 
+    description: 24h à 48h après le rendez-vous (hors formule "A la carte")
+    icon: i-tabler-mail-forward
+  - title: Signature du devis et reception de l'accompte
+    date: 
+    description: 
+    icon: i-tabler-writing-sign
+  - title: Préparation de votre itinéraire
+    date: 
+    description: 1 à 2 semaines (hors formules "A la carte")
+    icon: i-tabler-book
+  - title: Reception du montant total
+    date: 
+    description: 
+    icon: i-tabler-receipt-euro
+  - title: Validation de votre projet et modifications si incluses ou en option
+    date: 
+    description:
+    icon: i-tabler-circle-check
+  - title: Recevez votre carnet de voyage en format PDF
+    date: 
+    description: 1 semaine après validation (hors formule "A la carte")
+    icon: i-lucide-globe-2
 features:
-  title: Everything You Need to Ship
-  description: Stop building from scratch. Focus on your unique features while Nuxt UI handles the foundations with battle-tested components and patterns.
+  title: Comment fonctionnons-nous ?
+  description: 
   items:
-    - title: Beautiful Design System
-      description: Semantic color aliases, comprehensive design tokens, and Tailwind Variants for consistent, customizable styling.
-      icon: i-lucide-palette
-    - title: Accessible by Default
-      description: Built on Reka UI for robust accessibility. WCAG compliant components that work for everyone, everywhere.
-      icon: i-lucide-accessibility
-    - title: Developer Experience
-      description: Auto-imports, hot module replacement, and comprehensive documentation. Build faster with less friction.
-      icon: i-lucide-terminal
-    - title: SEO Optimized
-      description: Server-side rendering, automatic meta tags, sitemap generation, and Open Graph images out of the box.
-      icon: i-lucide-search
-    - title: Production Ready
-      description: Error handling, loading states, form validation, and security best practices built into every component.
-      icon: i-lucide-check-circle
-    - title: Infinitely Customizable
-      description: Override any style with the ui prop, customize globally with AppConfig, or use Tailwind classes directly.
-      icon: i-lucide-settings
+    - title: "1. Premier contact"
+      description: "Nous échangeons ensemble par téléphone ou en visio pour cerner vos envies et votre style de voyage. Cet échange compris dans la formule et sans engagement, nous permet de mieux comprendre votre projet et répondre au mieux à vos besoin."
+
+    - title: "2. Étude du projet et devis"
+      description: "Après avoir étudié la faisabilité de votre demande, nous préparons une synthèse de notre échange et nous vous envoyons le devis. Dès validation de votre part et réception de l'accompte, nous commencons les recherches de vols, transports, hébergements, activités etc."
+
+    - title: "3. Mise en place du voyage"
+      description: "Nous vous présentons une sélection personnalisée pour votre séjour. Il ne vous reste plus qu’à choisir ce qui correspond le mieux à vos attentes."
+
+    - title: "4. Choix & réservations"
+      description: "Une fois vos choix validés, vous pouvez réserver facilement grâce aux liens directs que nous vous avons préparés."
+
+    - title: "5. Carnet de voyage"
+      description: "Quelques jours plus tard, vous recevez un carnet de voyage complet (en PDF) : résumé de votre projet, informations pratiques, bonnes adresses, planning, etc."
+
+    - title: "6. Le grand départ !"
+      description: "N'oubliez pas... on s'occupe de tout, sauf de vos valises ! Il ne vous reste plus qu’à préparer vos affaires et c'est parti pour votre voyage !"
 testimonials:
   headline: Trusted by Developers
   title: Join Thousands Building with Nuxt UI

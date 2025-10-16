@@ -38,16 +38,45 @@ export const collections = {
     type: 'page',
     schema: z.object({
       hero: z.object(({
-        links: z.array(createLinkSchema())
+        links: z.array(createLinkSchema()),
+        lola: z.object(({
+          titre: z.string().nonempty(),
+          src: z.string().nonempty(),
+        })),
+        anthony: z.object(({
+          titre: z.string().nonempty(),
+          src: z.string().nonempty(),
+        })),
       })),
       sections: z.array(
         createBaseSchema().extend({
           id: z.string().nonempty(),
           orientation: orientationEnum.optional(),
           reverse: z.boolean().optional(),
+          image: z.string().nonempty(),
           features: z.array(createFeatureItemSchema())
         })
       ),
+      valeurs: z.object(({
+        orientation: orientationEnum.optional(),
+        reverse: z.boolean().optional(),
+        valeurs: z.array(z.object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+          flip: z.boolean().optional(),
+        }))
+      })),
+
+      delais: createBaseSchema().extend(({
+        delais: z.array(z.object(({
+          date: z.string().nonempty(),
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+          icon: z.string().optional().editor({ input: 'icon' }),
+        }))),
+      })),
+
+
       features: createBaseSchema().extend({
         items: z.array(createFeatureItemSchema())
       }),
@@ -178,10 +207,64 @@ export const collections = {
     })
   }),
 
-blog: defineCollection({
-  source: '3.blog.yml',
-  type: 'page'
-}),
+
+  formules: defineCollection({
+    source: '7.formules.yml',
+    type: 'page',
+    schema: z.object({
+      form: createBaseSchema().extend({
+        formules: z.array(
+          z.object({
+            title: z.string().nonempty(),
+            description: z.string().nonempty(),
+            image: z.string().nonempty(),
+            id: z.string().nonempty(),
+            price: z.string().nonempty(),
+            features: z.array(z.string().nonempty())
+          })
+        )
+      })
+    })
+  }),
+
+  formule: defineCollection({
+    source: '7.formules/**/*',
+    type: 'page',
+    schema: z.object({
+      image: z.object({ src: z.string().nonempty().editor({ input: 'media' }) }),
+      formule:
+        z.object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+          image: z.object({ src: z.string().nonempty().editor({ input: 'media' }) }),
+          price: z.string().nonempty(),
+          features: z.array(z.string().nonempty()),
+          link: z.string().nonempty(),
+        }),
+    })
+  }),
+
+  rdv: defineCollection({
+    source: '8.rdv.yml',
+    type: 'page',
+    schema: z.object({
+      rdv:
+        z.object({
+          title: z.string().nonempty(),
+          subtitle: z.string().nonempty(),
+          description: z.string().nonempty(),
+          link_cal: z.string().nonempty(),
+        }),
+    })
+  }),
+
+
+
+  blog: defineCollection({
+    source: '3.blog.yml',
+    type: 'page'
+  }),
+
   posts: defineCollection({
     source: '3.blog/**/*',
     type: 'page',
@@ -198,18 +281,22 @@ blog: defineCollection({
       badge: z.object({ label: z.string().nonempty() })
     })
   }),
-    changelog: defineCollection({
-      source: '4.changelog.yml',
-      type: 'page'
-    }),
-      versions: defineCollection({
-        source: '4.changelog/**/*',
-        type: 'page',
-        schema: z.object({
-          title: z.string().nonempty(),
-          description: z.string(),
-          date: z.date(),
-          image: z.string()
-        })
-      })
+
+
+
+  changelog: defineCollection({
+    source: '4.changelog.yml',
+    type: 'page'
+  }),
+  versions: defineCollection({
+    source: '4.changelog/**/*',
+    type: 'page',
+    schema: z.object({
+      title: z.string().nonempty(),
+      description: z.string(),
+      date: z.date(),
+      image: z.string()
+    })
+  })
+
 }

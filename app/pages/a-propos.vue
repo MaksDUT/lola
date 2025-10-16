@@ -99,10 +99,10 @@ defineOgImageComponent('Saas')
       </UPageHero>
 
 
-      <UCarousel v-slot="{ item }" class-names arrows :items="page.anthony.diapo" class="w-full md:w-2/3 mx-auto" :ui="{
+      <UCarousel v-slot="{ item }" class-names arrows :items="page.anthony.diapo" class="w-full md:w-3/4 mx-auto" :ui="{
         item: 'transition-opacity [&:not(.is-snapped)]:opacity-10 relative rounded-lg'
       }">
-        <img :src="item.src" class="object-cover w-full h-70 md:h-170 rounded-lg ">
+        <img :src="item.src" class="object-cover w-full h-70 md:h-100 rounded-lg ">
 
         <!-- overlay caption -->
         <div v-if="item.alt"
