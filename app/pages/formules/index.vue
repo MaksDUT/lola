@@ -66,7 +66,7 @@ const sections = ref([
 
             }">
 
-            <NuxtImg :src="card.image" width="1920" height="1080" class="w-full h-50" :modifiers="{ fit: 'outside', rotate: '90' }"
+            <NuxtImg :src="card.image" width="1920" height="1080" class="w-full h-50 object-cover" :modifiers="{ fit: 'outside', rotate: '90' }"
               :custom="true" v-slot="{ src, isLoaded, imgAttrs }">
 
               <img v-if="isLoaded" v-bind="imgAttrs" :src="src">
