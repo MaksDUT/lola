@@ -13,6 +13,16 @@ useSeoMeta({
   description,
   ogDescription: description
 })
+
+const { isMobile } = useDevice()
+
+const timeline = isMobile ? 'vertical' : 'horizontal';
+
+
+const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022 - Ville de Paphos" }, { src: "/img/apropos/antho2.jpg", caption: "Equateur - 2024 - Mirador de Indichuris" }, { src: "/img/apropos/antho3.jpg", caption: "Pays Bas - 2023 - Ville d'Amsterdam" }];
+
+
+
 </script>
 
 <template>
@@ -43,14 +53,14 @@ useSeoMeta({
       <template #title>
         <MDC :value="page.title" unwrap="p" />
       </template>
-      <div class="flex flex-row space-x-5 justify-center">
-        <div class="polaroid rotate-[0deg] w-1/3 ">
+      <div class="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5 justify-center">
+        <div class="polaroid rotate-[0deg] sm:w-1/3 ">
           <img :src="page.hero.lola.src" alt="page.lola1.image.alt"
             class=" rounded-lg shadow-2xl ring ring-default w-full h-100 object-cover" />
           <div class="caption">{{ page.hero.lola.titre }}</div>
         </div>
 
-        <div class="polaroid rotate-[0deg] w-1/3 ">
+        <div class="polaroid rotate-[0deg] sm:w-1/3 ">
           <img :src="page.hero.anthony.src" alt="page.lola1.image.alt"
             class=" rounded-lg shadow-2xl ring ring-default w-full h-100 object-cover" />
           <div class="caption">{{ page.hero.anthony.titre }}</div>
@@ -97,12 +107,26 @@ useSeoMeta({
     <USeparator />
 
 
-    <UPageSection id="delais" 
-      >
+    <UPageSection id="delais">
 
-        <UTimeline orientation="horizontal" size="2xl" :default-value="page.delais.delais.length" :items="page.delais.delais" class="w-full" />
+      <UTimeline :orientation="timeline" size="2xl" :default-value="page.delais.delais.length"
+        :items="page.delais.delais" class="w-full" />
 
     </UPageSection>
+
+
+    <UPageSection id="formules" title="Découvrez nos formules" description="Voici une petit aperçu de l'ensemble de nos forumules. Découvrez les et choisissez celle qui vous convient le mieux !1">
+      <UCarousel v-slot="{ item }" loop  auto-scroll :items="anthony_carou" :ui="{ item: 'basis-1/3 relative p-0 m-2' }">
+        <img :src="item.src" width="234" height="234" class="rounded-lg w-full">
+                <!-- overlay caption -->
+        <div v-if="item.caption"
+          class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 via-black/40 to-transparent text-white p-4 text-sm md:text-base rounded-lg">
+          <p class="font-semibold text-center">{{ item.caption }}</p>
+        </div>
+      </UCarousel>
+    </UPageSection>
+
+
 
 
 
