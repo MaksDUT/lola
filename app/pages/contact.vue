@@ -24,7 +24,7 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
   <section id="contact" class="py-16 bg-base-200">
     <div class="max-w-3xl mx-auto text-center mb-10">
       <h2 class="text-3xl font-bold mb-4">Contactez-nous</h2>
-      <p class="text-lg">Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.</p>
+      <p class="text-lg">Remplissez le formulaire ci-dessous et nous vous répondrons rapidement</p>
     </div>
 
     <div class="max-w-2xl mx-auto bg-white rounded-lg p-8">
@@ -52,7 +52,7 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
           <input type="hidden" name="_next" value="https://presdailleurs.fr/merci.html">
           <input type="hidden" name="_subject" value="Nouveau message de contact !">
 
-          <button type="submit" class="btn bg-base-100 w-full md:w-auto hover:bg-grlola rounded p-2">Envoyez votre message</button>
+          <button type="submit" class="btn bg-base-100 w-full md:w-auto hover:bg-lola-500 rounded p-2">Envoyez votre message</button>
         </form>
       </UCard>
 
@@ -84,12 +84,13 @@ async function onSubmit(event: FormSubmitEvent<typeof state>) {
 
 button[type="submit"] {
   background-color: #d8cfc4;
-  color: oklch(37.2% 0.044 257.287);
+  color: white;
   font-weight: 500;
   cursor: pointer;
 }
 
 .btn:hover{
-  background-color: #f9fafb;
+  background-color: var(--color-lola-500);
+  color: white;
 }
 </style>

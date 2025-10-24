@@ -19,7 +19,7 @@ const { isMobile } = useDevice()
 const timeline = isMobile ? 'vertical' : 'horizontal';
 
 
-const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022 - Ville de Paphos" }, { src: "/img/apropos/antho2.jpg", caption: "Equateur - 2024 - Mirador de Indichuris" }, { src: "/img/apropos/antho3.jpg", caption: "Pays Bas - 2023 - Ville d'Amsterdam" }];
+const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022 - Ville de Paphos" }, { src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022 - Ville de Paphos" }, { src: "/img/apropos/antho2.jpg", caption: "Equateur - 2024 - Mirador de Indichuris" }, { src: "/img/apropos/antho3.jpg", caption: "Pays Bas - 2023 - Ville d'Amsterdam" }];
 
 
 
@@ -45,7 +45,7 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
     </section>
 
 
-    <UPageHero :title="page.title" :description="page.description" :links="page.hero.links">
+    <UPageHero :title="page.title" :description="page.description" >
       <template #top>
         <HeroBackground />
       </template>
@@ -66,12 +66,22 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
           <div class="caption">{{ page.hero.anthony.titre }}</div>
         </div>
       </div>
+
+
+      <div class="flex justify-center">
+        <UButton :label="page.hero.links[0]?.label" :size="page.hero.links[0]?.size" :color="page.hero.links[0]?.color"
+          :icon="page.hero.links[0]?.icon" :trailing="page.hero.links[0]?.trailing" :target="page.hero.links[0]?.target"
+          :to="page.hero.links[0]?.to"></UButton>
+      </div>
+
     </UPageHero>
 
 
     <UPageSection v-for="(section, index) in page.sections" :key="index" :title="section.title"
       :description="section.description" :orientation="section.orientation" :reverse="section.reverse"
-      :features="section.features">
+      :features="section.features" :ui="{
+        container: 'flex flex-col lg:grid py-16 sm:py-24 lg:py-16 gap-8 sm:gap-16'
+      }">
 
       <NuxtImg v-if="section.image" :src="section.image"></NuxtImg>
     </UPageSection>
@@ -107,7 +117,7 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
     <USeparator />
 
 
-    <UPageSection id="delais">
+    <UPageSection id="delais" :title="page.delais.title">
 
       <UTimeline :orientation="timeline" size="2xl" :default-value="page.delais.delais.length"
         :items="page.delais.delais" class="w-full" />
@@ -115,10 +125,11 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
     </UPageSection>
 
 
-    <UPageSection id="formules" title="Découvrez nos formules" description="Voici une petit aperçu de l'ensemble de nos forumules. Découvrez les et choisissez celle qui vous convient le mieux !1">
-      <UCarousel v-slot="{ item }" loop  auto-scroll :items="anthony_carou" :ui="{ item: 'basis-1/3 relative p-0 m-2' }">
+    <UPageSection id="formules" title="Découvrez nos formules"
+      description="Voici une petit aperçu de l'ensemble de nos forumules. Découvrez les et choisissez celle qui vous convient le mieux !1">
+      <UCarousel v-slot="{ item }" loop auto-scroll :items="anthony_carou" :ui="{ item: 'basis-1/3 relative p-0 m-2' }">
         <img :src="item.src" width="234" height="234" class="rounded-lg w-full">
-                <!-- overlay caption -->
+        <!-- overlay caption -->
         <div v-if="item.caption"
           class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 via-black/40 to-transparent text-white p-4 text-sm md:text-base rounded-lg">
           <p class="font-semibold text-center">{{ item.caption }}</p>
@@ -146,9 +157,6 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
 
     <USeparator />
 
-    <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden">
-      <LazyStarsBg />
-    </UPageCTA>
   </div>
 </template>
 
@@ -156,7 +164,7 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
 .polaroid {
   background: #fff;
   padding: 10px 10px 30px 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   display: inline-block;
   transform: rotate(0deg);
   transition: transform 0.3s ease;
@@ -169,7 +177,7 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
 .caption {
   text-align: center;
   margin-top: 8px;
-  font-size: 0.9rem;
+  font-size: 1.25rem;
   color: #555;
   font-style: italic;
 }

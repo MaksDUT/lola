@@ -57,13 +57,14 @@ const sections = ref([
           <p class="text-lg">{{ description }} </p>
         </div>
 
-        <UPageGrid class="p-6">
+        <UPageGrid class="p-6" :ui="{
+          base: 'relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4'
+        }">
           <UPageCard v-for="(card, index) in page.form.formules" spotlight spotlight-color="primary" :key="index" to=""
-            class="p-0" :ui="{
-              body: 'p-0',
+            class="p-0 hover:scale-105 transition delay-150 duration-300 ease-in-out" :ui="{
+              body: 'p-0 ',
               container: 'sm:p-0 border-round',
               root: 'p-0',
-
             }">
 
             <NuxtImg :src="card.image" width="1920" height="1080" class="w-full h-50 object-cover" :modifiers="{ fit: 'outside', rotate: '90' }"
@@ -89,7 +90,7 @@ const sections = ref([
               </ul>
 
               <div class="flex justify-center">
-                <UButton label="En savoir plus" class="text-center bg-lola-bg-1 text-black hover:bg-lola-bg-2" :to="card.link" />
+                <UButton label="En savoir plus" class="text-center bg-lola-bg-1 text-white hover:bg-lola-bg-2" :to="card.link" />
               </div>
 
             </div>
