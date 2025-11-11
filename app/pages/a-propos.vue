@@ -66,7 +66,7 @@ defineOgImageComponent('Saas')
       <UPageHero :title="page.lola1.title" :description="page.lola1.description" orientation="horizontal">
         <div class="polaroid rotate-[3deg]">
           <img :src="page.lola1.image.src" :alt="page.lola1.image.alt"
-            class=" rounded-lg shadow-2xl ring ring-default" />
+            class=" rounded-lg  ring ring-default" />
           <div class="caption">{{ page.lola1.image.alt }}</div>
         </div>
       </UPageHero>
@@ -74,22 +74,22 @@ defineOgImageComponent('Saas')
       <UPageHero :description="page.lola2.description" orientation="horizontal" reverse>
         <div class="polaroid">
           <img :src="page.lola2.image.src" :alt="page.lola2.image.alt"
-            class=" rounded-lg shadow-2xl ring ring-default" />
+            class=" rounded-lg  ring ring-default" />
           <div class="caption">{{ page.lola2.image.alt }}</div>
         </div>
       </UPageHero>
 
       <UPageHero :description="page.lola3.description" orientation="horizontal">
-        <div class="flex flex-col space-y-5">
+        <div class="flex flex-col space-y-9">
           <div class="polaroid rotate-[-3deg]">
             <img :src="page.lola3.image1.src" :alt="page.lola3.image1.alt"
-              class=" rounded-lg shadow-2xl ring ring-default " />
+              class=" rounded-lg  ring ring-default " />
             <div class="caption">{{ page.lola3.image1.alt }}</div>
           </div>
 
           <div class="polaroid rotate-[3deg]">
             <img :src="page.lola3.image2.src" :alt="page.lola3.image2.alt"
-              class=" rounded-lg shadow-2xl ring ring-default" />
+              class=" rounded-lg  ring ring-default" />
             <div class="caption">{{ page.lola3.image1.alt }}</div>
           </div>
         </div>
@@ -166,7 +166,7 @@ defineOgImageComponent('Saas')
 <style scoped>
 .polaroid {
   background: #fff;
-  padding: 10px 10px 30px 10px;
+  padding: 10px 10px 15px 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: inline-block;
   transform: rotate(-3deg);
@@ -179,7 +179,7 @@ defineOgImageComponent('Saas')
 
 .caption {
   text-align: center;
-  margin-top: 8px;
+  margin-top: 15px;
   font-size: 0.9rem;
   color: #555;
   font-style: italic;

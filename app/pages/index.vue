@@ -39,13 +39,15 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
 
       <!-- Hero Content -->
       <div class="relative z-10 text-center text-white px-6">
-        <h1 class="text-5xl font-bold mb-4">Près d'Ailleurs</h1>
-        <p class="text-xl">On s'occupe de tout, sauf de vos valises</p>
+        <h1 class="text-9xl font-bold mb-4">Près d'Ailleurs</h1>
+        <div class="typewriter">
+          <h1 class="text-4xl">"On s'occupe de tout, sauf de vos valises"</h1>
+        </div>
       </div>
     </section>
 
 
-    <UPageHero :title="page.title" :description="page.description" >
+    <UPageHero :title="page.title" :description="page.description">
       <template #top>
         <HeroBackground />
       </template>
@@ -53,7 +55,7 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
       <template #title>
         <MDC :value="page.title" unwrap="p" />
       </template>
-      <div class="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5 justify-center">
+      <div class="flex flex-col sm:flex-row space-y-15 sm:space-y-0 sm:space-x-30 justify-center">
         <div class="polaroid rotate-[0deg] sm:w-1/3 ">
           <img :src="page.hero.lola.src" alt="page.lola1.image.alt"
             class=" rounded-lg shadow-2xl ring ring-default w-full h-100 object-cover" />
@@ -76,6 +78,8 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
 
     </UPageHero>
 
+    <div class="separator text-primary opacity-25">
+    </div>
 
     <UPageSection v-for="(section, index) in page.sections" :key="index" :title="section.title"
       :description="section.description" :orientation="section.orientation" :reverse="section.reverse"
@@ -85,6 +89,9 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
 
       <NuxtImg v-if="section.image" :src="section.image"></NuxtImg>
     </UPageSection>
+
+    <div class="separator text-primary opacity-25">
+    </div>
 
     <div class="conteneur">
       <div :class="`circle ${valeur.flip ? 'flipped' : ''}`" v-for="(valeur, index) in valeurs"
@@ -100,7 +107,7 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
 
 
     <UPageSection :title="page.features.title" :description="page.features.description">
-      <UPageGrid>
+      <UPageGrid class="lg:grid-cols-3">
         <UPageCard v-for="(item, index) in page.features.items" :key="index" v-bind="item" spotlight>
 
           <template #title>
@@ -114,7 +121,8 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
     </UPageSection>
 
 
-    <USeparator />
+    <div class="separator text-primary opacity-25">
+    </div>
 
 
     <UPageSection id="delais" :title="page.delais.title">
@@ -163,7 +171,7 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
 <style scoped>
 .polaroid {
   background: #fff;
-  padding: 10px 10px 30px 10px;
+  padding: 10px 10px 15px 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   display: inline-block;
   transform: rotate(0deg);
@@ -176,10 +184,11 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
 
 .caption {
   text-align: center;
-  margin-top: 8px;
-  font-size: 1.25rem;
+  margin-top: 15px;
+  font-size: 1.5rem;
   color: #555;
   font-style: italic;
+  font-weight: 700;
 }
 
 
@@ -284,7 +293,7 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
   background: #D8CFC4;
   color: #fff;
   font-family: 'Amatic SC', cursive;
-  font-size: 2.5em;
+  font-size: 2.1em;
 
 }
 
@@ -300,5 +309,16 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
   font-family: 'Nuito', cursive;
   font-size: 1em;
 
+}
+
+
+/* ==== SEPARATION EN "...." ==== */
+.separator {
+  border: none;
+  /* Supprime la bordure par défaut */
+  border-top: 5px dotted #000;
+  /* Bordure supérieure en pointillés (noire) */
+  margin: 50px 100px;
+  /* Espacement haut/bas */
 }
 </style>
