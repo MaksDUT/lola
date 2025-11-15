@@ -220,7 +220,9 @@ export const collections = {
             image: z.string().nonempty(),
             id: z.string().nonempty(),
             price: z.string().nonempty(),
-            features: z.array(z.string().nonempty())
+            features: z.array(z.string().nonempty()),
+            no_features: z.array(z.string().nonempty()),
+            link_cal: z.string().nonempty()
           })
         )
       })

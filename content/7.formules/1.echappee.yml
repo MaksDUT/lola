@@ -19,3 +19,8 @@ formule:
     - "Jusqu'à 3 propositions d'activités, lieux d'intérêts"
     - "Informations pratiques (visa, administratif, budget, santé, check-list)"
     - "Carnet de voyage au format PDF"
+
+  no_features: 
+    - "Test"
+    - "2 eme test"
+  link_cal: "presdailleurs/lointains-horizons"

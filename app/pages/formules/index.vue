@@ -57,8 +57,8 @@ const sections = ref([
           <p class="text-lg">{{ description }} </p>
         </div>
 
-        <UPageGrid class="p-6" :ui="{
-          base: 'relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4'
+        <UPageGrid class="p-6 gap-8" :ui="{
+          base: 'relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6'
         }">
           <UPageCard v-for="(card, index) in page.form.formules" spotlight spotlight-color="primary" :key="index" to=""
             class="p-0 hover:scale-105 transition delay-150 duration-300 ease-in-out" :ui="{
