@@ -1,8 +1,17 @@
 <script setup lang="ts">
+const route = useRoute()
+
 const { data: page } = await useAsyncData('index', () => queryCollection('index').first())
+
+const { data: posts } = await useAsyncData(route.path, () => queryCollection('posts').limit(3).all())
+
+const { data: data_formules } = await useAsyncData('formules', () => queryCollection('formules').first())
+
 
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
+
+
 
 const valeurs = ref(page.value?.valeurs.valeurs)
 
@@ -92,17 +101,24 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
 
     <div class="separator text-primary opacity-25">
     </div>
-
-    <div class="conteneur">
-      <div :class="`circle ${valeur.flip ? 'flipped' : ''}`" v-for="(valeur, index) in valeurs"
-        @click="() => valeur.flip = !valeur.flip">
-        <div class="inner" @click="() => valeur.flip != valeur.flip"> <!-- L'intérieur qui tourne -->
-          <div :class="`face  ${index % 2 ? 'front' : 'front2'}`">{{ valeur.title }}</div>
-          <!-- Face avant avec un titre -->
-          <div :class="`face  ${index % 2 ? 'back' : 'back2'}`">{{ valeur.description }}</div>
-          <!-- Face arrière avec le texte -->
+    <UPageSection title="Nos valeurs" :ui="{
+      container: 'w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-0 flex flex-col lg:grid py-16 sm:py-24 lg:py-32 gap-8 sm:gap-16'
+    }">
+      <div class="conteneur">
+        <div :class="`circle ${valeur.flip ? 'flipped' : ''}`" v-for="(valeur, index) in valeurs"
+          @click="() => valeur.flip = !valeur.flip">
+          <div class="inner" @click="() => valeur.flip != valeur.flip"> <!-- L'intérieur qui tourne -->
+            <div :class="`face  ${index % 2 ? 'front' : 'front2'}`">{{ valeur.title }}</div>
+            <!-- Face avant avec un titre -->
+            <div :class="`face  ${index % 2 ? 'back' : 'back2'}`">{{ valeur.description }}</div>
+            <!-- Face arrière avec le texte -->
+          </div>
         </div>
       </div>
+    </UPageSection>
+
+
+    <div class="separator text-primary opacity-25">
     </div>
 
 
@@ -132,22 +148,53 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
 
     </UPageSection>
 
+    <div class="separator text-primary opacity-25">
+    </div>
+
+    <UPageSection id="blog" title="Nos aventure">
+      <UPageBody>
+        <UBlogPosts>
+          <UBlogPost v-for="(post, index) in posts" :key="index" :to="post.path" :title="post.title"
+            :description="post.description_intro" :image="post.image"
+            :date="new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' })"
+            :authors="post.authors" :badge="post.badge" variant="naked" :ui="{
+              description: ''
+            }" />
+        </UBlogPosts>
+      </UPageBody>
+
+    </UPageSection>
+
+
+    <div class="separator text-primary opacity-25">
+    </div>
 
     <UPageSection id="formules" title="Découvrez nos formules"
       description="Voici une petit aperçu de l'ensemble de nos forumules. Découvrez les et choisissez celle qui vous convient le mieux !1">
-      <UCarousel v-slot="{ item }" loop auto-scroll :items="anthony_carou" :ui="{ item: 'basis-1/3 relative p-0 m-2' }">
-        <img :src="item.src" width="234" height="234" class="rounded-lg w-full">
+      <UCarousel v-slot="{ item }" loop auto-scroll :items="data_formules.form.formules"
+        :ui="{ item: 'basis-1/3 relative p-0 m-2' }">
+        <!-- <img :src="item.image" width="234" height="234" class="rounded-lg w-full h-fit object-cover"> -->
+        <NuxtImg :src="item.image" width="1920" height="1080" class="w-full h-80 object-cover"
+          :modifiers="{ fit: 'outside', rotate: '90' }" :custom="true" v-slot="{ src, isLoaded, imgAttrs }">
+
+          <img v-if="isLoaded" v-bind="imgAttrs" :src="src">
+
+        </NuxtImg>
         <!-- overlay caption -->
-        <div v-if="item.caption"
+        <div v-if="item.description"
           class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 via-black/40 to-transparent text-white p-4 text-sm md:text-base rounded-lg">
-          <p class="font-semibold text-center">{{ item.caption }}</p>
+          <NuxtLink class="font-semibold text-center" :to="item.link">
+            {{ item.title }}
+          </NuxtLink>
+
         </div>
       </UCarousel>
     </UPageSection>
 
 
 
-
+    <div class="separator text-primary opacity-25">
+    </div>
 
 
     <UPageSection id="testimonials" :headline="page.testimonials.headline" :title="page.testimonials.title"
@@ -195,8 +242,8 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
 
 .circle {
   /* Conteneur du rond */
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   /* Taille du rond */
   border-radius: 50%;
   /* Rend la forme circulaire */
@@ -265,7 +312,7 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
   background: #A3B18A;
   color: #fff;
   font-family: 'Amatic SC', cursive;
-  font-size: 2.5em;
+  font-size: 2em;
 
 }
 
@@ -293,7 +340,7 @@ const anthony_carou = [{ src: "/img/apropos/antho1.jpg", caption: "Chypre - 2022
   background: #D8CFC4;
   color: #fff;
   font-family: 'Amatic SC', cursive;
-  font-size: 2.1em;
+  font-size: 2em;
 
 }
 

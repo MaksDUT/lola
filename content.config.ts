@@ -271,6 +271,7 @@ export const collections = {
     source: '3.blog/**/*',
     type: 'page',
     schema: z.object({
+      description_intro: z.string().nonempty(),
       image: z.object({ src: z.string().nonempty().editor({ input: 'media' }) }),
       authors: z.array(
         z.object({
