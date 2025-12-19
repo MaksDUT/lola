@@ -7,14 +7,28 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    '@nuxtjs/device'
+    '@nuxtjs/device',
+    'nuxt-studio'
   ],
 
-  content: {
+  studio: {
+    // Studio admin route (default: '/_studio')
+    route: '/_studio',
+    
+    // Git repository configuration (owner and repo are required)
+    repository: {
+      provider: 'github', // 'github' or 'gitlab'
+      owner: 'MaksDUT', // your GitHub/GitLab username or organization
+      repo: 'lola', // your repository name
+      branch: 'main', // the branch to commit to (default: main)
+    }
+  },
+
+/*   content: {
     preview: {
       api: 'https://api.nuxt.studio'
     }
-  },
+  }, */
 
   ui: {
     colorMode: false

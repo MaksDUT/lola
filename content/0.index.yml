@@ -1,9 +1,66 @@
 title: Qui sommes-nous ?
+cta:
+  title: Ready to build an amazing SaaS?
+  description: Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today.
+  links:
+    - label: Start building
+      to: https://ui.nuxt.com/docs/getting-started/installation/nuxt
+      target: _blank
+      trailingIcon: i-lucide-arrow-right
+    - label: View on GitHub
+      to: https://github.com/nuxt-ui-templates/saas
+      target: _blank
+      variant: subtle
+      icon: i-simple-icons-github
+delais:
+  title: Nos délais
+  delais:
+    - title: Appel de découverte
+      date: ""
+      description: ""
+      icon: i-lucide-phone
+    - title: Envoi du devis
+      date: ""
+      description: 24h à 48h après le rendez-vous (hors formule "A la carte")
+      icon: i-tabler-mail-forward
+    - title: Signature du devis et reception de l'accompte
+      date: ""
+      description: ""
+      icon: i-tabler-writing-sign
+    - title: Préparation de votre itinéraire
+      date: ""
+      description: 1 à 2 semaines (hors formules "A la carte")
+      icon: i-tabler-book
+    - title: Reception du montant total
+      date: ""
+      description: ""
+      icon: i-tabler-receipt-euro
+    - title: Validation de votre projet et modifications si incluses ou en option
+      date: ""
+      description: ""
+      icon: i-tabler-circle-check
+    - title: Recevez votre carnet de voyage en format PDF
+      date: ""
+      description: 1 semaine après validation (hors formule "A la carte")
+      icon: i-lucide-globe-2
+  description: ""
 description: Nous c'est Lola & Anthony. Amis depuis plusieurs années, nous nous sommes rencontrés durant nos études suppérieures. Nous sommes tous les deux passionnés de voyages, d'aventures et de découvertes.
-seo:
-  title: Près d'ailleurs
-  description: Nous c'est Lola & Anthony. Amis depuis plusieurs années, nous nous sommes rencontrés durant nos études suppérieures. Nous sommes tous les deux passionnés de voyages, d'aventures et de découvertes.
-navigation: false
+features:
+  title: Comment fonctionnons-nous ?
+  description: ""
+  items:
+    - title: 1. Premier contact
+      description: Nous échangeons ensemble par téléphone ou en visio pour cerner vos envies et votre style de voyage. Cet échange compris dans la formule et sans engagement, nous permet de mieux comprendre votre projet et répondre au mieux à vos besoin.
+    - title: 2. Étude du projet et devis
+      description: Après avoir étudié la faisabilité de votre demande, nous préparons une synthèse de notre échange et nous vous envoyons le devis. Dès validation de votre part et réception de l'accompte, nous commencons les recherches de vols, transports, hébergements, activités etc.
+    - title: 3. Mise en place du voyage
+      description: Nous vous présentons une sélection personnalisée pour votre séjour. Il ne vous reste plus qu’à choisir ce qui correspond le mieux à vos attentes.
+    - title: 4. Choix & réservations
+      description: Une fois vos choix validés, vous pouvez réserver facilement grâce aux liens directs que nous vous avons préparés.
+    - title: 5. Carnet de voyage
+      description: "Quelques jours plus tard, vous recevez un carnet de voyage complet (en PDF) : résumé de votre projet, informations pratiques, bonnes adresses, planning, etc."
+    - title: 6. Le grand départ !
+      description: N'oubliez pas... on s'occupe de tout, sauf de vos valises ! Il ne vous reste plus qu’à préparer vos affaires et c'est parti pour votre voyage !
 hero:
   links:
     - label: Découvrez-nous
@@ -19,13 +76,14 @@ hero:
   anthony:
     titre: Anthony
     src: /img/apropos/anthoindex.jpg
+navigation: false
 sections:
   - title: Pourquoi faire appel à nous ?
     description: Préparer un voyage, c’est excitant… mais cela prend du temps, de l'énergie et parfois cela devient un casse-tête...entre les recherches interminables (vols, hébergements...), les comparaisons de prix, les avis contradictoires et les petits détails qu’on ne veut pas rater, cela peut vite devenir une source de stress. C’est là que nous intervenons ! Notre rôle de travel planner est justement de vous libérer de cette charge pour que vous retrouviez le plaisir de voyager dès la préparation.
     id: features
     orientation: vertical
   - title: Concrètement, que faisons-nous pour vous ?
-    description: ''
+    description: ""
     orientation: horizontal
     image: /img/c5.jpg
     reverse: true
@@ -34,7 +92,7 @@ sections:
         description: Nous prenons le temps d’échanger avec vous pour cerner vos envies, vos habitudes de voyage et votre budget.
         icon: i-lucide-zap
       - name: Recherche
-        description: 'Nous faisons pour vous le travail de recherche : hébergements, transports, activités, bonnes adresses locales, astuces pratiques.'
+        description: "Nous faisons pour vous le travail de recherche : hébergements, transports, activités, bonnes adresses locales, astuces pratiques."
         icon: i-lucide-moon
       - name: Itinéraire
         description: Nous construisons un itinéraire 100 % personnalisé, clair et détaillé, qui s’adapte à votre rythme et à vos priorités.
@@ -43,99 +101,30 @@ sections:
         description: Nous vous proposons toujours plusieurs options, pour que vous gardiez la liberté de choisir et de réserver par vous-même.
         icon: i-lucide-globe
   - title: Les avantages
-    description: ''
+    description: ""
     orientation: horizontal
     image: /img/c5.jpg
     reverse: false
     features:
       - name: Gain de temps
-        description: 'Un gain de temps énorme : fini les soirées passées à éplucher les comparateurs et les blogs.'
+        description: "Un gain de temps énorme : fini les soirées passées à éplucher les comparateurs et les blogs."
         icon: i-lucide-zap
       - name: Recherche
-        description: 'Un voyage sur-mesure : pas de programme standardisé, tout est pensé pour vous et selon vous.'
+        description: "Un voyage sur-mesure : pas de programme standardisé, tout est pensé pour vous et selon vous."
         icon: i-lucide-moon
       - name: Itinéraire
-        description: 'De la sérénité : nous avons déjà filtré et validé les meilleures alternatives pour que vous puissiez avancer en toute confiance.'
+        description: "De la sérénité : nous avons déjà filtré et validé les meilleures alternatives pour que vous puissiez avancer en toute confiance."
         icon: i-lucide-globe
       - name: Options
-        description: 'La maîtrise de votre budget : vous payez uniquement votre formules (honoraires de planification) et vous réservez ensuite directement vos prestations sans intermédiaires ni commissions cachées.'
+        description: "La maîtrise de votre budget : vous payez uniquement votre formules (honoraires de planification) et vous réservez ensuite directement vos prestations sans intermédiaires ni commissions cachées."
         icon: i-lucide-globe
-valeurs:
-  title: Nos valeurs
-  description: Cliquez sur chacune de nos valeurs pour en savoir plus.
-  orientation: vertical
-  reverse: false
-  valeurs:
-    - title: La passion
-      description: Nous sommes passionnées par notre métier et par les voyages.
-      flip: false
-    - title: La transparence
-      description: Nous garantissons une relation claire et honnête. Pas de frais cachés.
-      flip: false
-    - title: Le partage
-      description: Nous partageons avec vous tips, bonnes adresses et recommandations.
-      flip: false
-    - title: La confiance
-      description: Nous nous occupons de l'organisation de votre voyage comme s'il s'agissait du nôtre.
-      flip: false
-    - title: La personnalisation
-      description: 'Notre objectif : vous concevoir un voyage sur mesure, adapté à vos envies et votre budget.'
-      flip: false
-    - title: La sérénité
-      description: Nous simplifions votre oganisation pour que vous profitiez pleinement de votre voyage.
-      flip: false
-delais:
-  title: Nos délais
-  delais:
-    - title: Appel de découverte
-      date: ''
-      description: ''
-      icon: i-lucide-phone
-    - title: Envoi du devis
-      date: ''
-      description: 24h à 48h après le rendez-vous (hors formule "A la carte")
-      icon: i-tabler-mail-forward
-    - title: Signature du devis et reception de l'accompte
-      date: ''
-      description: ''
-      icon: i-tabler-writing-sign
-    - title: Préparation de votre itinéraire
-      date: ''
-      description: 1 à 2 semaines (hors formules "A la carte")
-      icon: i-tabler-book
-    - title: Reception du montant total
-      date: ''
-      description: ''
-      icon: i-tabler-receipt-euro
-    - title: Validation de votre projet et modifications si incluses ou en option
-      date: ''
-      description: ''
-      icon: i-tabler-circle-check
-    - title: Recevez votre carnet de voyage en format PDF
-      date: ''
-      description: 1 semaine après validation (hors formule "A la carte")
-      icon: i-lucide-globe-2
-  description: ''
-features:
-  title: Comment fonctionnons-nous ?
-  description: ''
-  items:
-    - title: 1. Premier contact
-      description: Nous échangeons ensemble par téléphone ou en visio pour cerner vos envies et votre style de voyage. Cet échange compris dans la formule et sans engagement, nous permet de mieux comprendre votre projet et répondre au mieux à vos besoin.
-    - title: 2. Étude du projet et devis
-      description: Après avoir étudié la faisabilité de votre demande, nous préparons une synthèse de notre échange et nous vous envoyons le devis. Dès validation de votre part et réception de l'accompte, nous commencons les recherches de vols, transports, hébergements, activités etc.
-    - title: 3. Mise en place du voyage
-      description: Nous vous présentons une sélection personnalisée pour votre séjour. Il ne vous reste plus qu’à choisir ce qui correspond le mieux à vos attentes.
-    - title: 4. Choix & réservations
-      description: Une fois vos choix validés, vous pouvez réserver facilement grâce aux liens directs que nous vous avons préparés.
-    - title: 5. Carnet de voyage
-      description: 'Quelques jours plus tard, vous recevez un carnet de voyage complet (en PDF) : résumé de votre projet, informations pratiques, bonnes adresses, planning, etc.'
-    - title: 6. Le grand départ !
-      description: N'oubliez pas... on s'occupe de tout, sauf de vos valises ! Il ne vous reste plus qu’à préparer vos affaires et c'est parti pour votre voyage !
+seo:
+  title: Près d'ailleurs
+  description: Nous c'est Lola & Anthony. Amis depuis plusieurs années, nous nous sommes rencontrés durant nos études suppérieures. Nous sommes tous les deux passionnés de voyages, d'aventures et de découvertes.
 testimonials:
-  headline: ''
+  headline: ""
   title: Ce que disent nos clients
-  description: ''
+  description: ""
   items:
     - quote: Nuxt UI transformed how we build. The component quality is exceptional - everything just works with perfect TypeScript support, accessibility, and dark mode built in.
       user:
@@ -197,16 +186,27 @@ testimonials:
         description: Integration Specialist at TechFlow
         avatar:
           src: https://i.pravatar.cc/120?img=14
-cta:
-  title: Ready to build an amazing SaaS?
-  description: Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today.
-  links:
-    - label: Start building
-      to: https://ui.nuxt.com/docs/getting-started/installation/nuxt
-      target: _blank
-      trailingIcon: i-lucide-arrow-right
-    - label: View on GitHub
-      to: https://github.com/nuxt-ui-templates/saas
-      target: _blank
-      variant: subtle
-      icon: i-simple-icons-github
+valeurs:
+  title: Nos valeurs
+  description: Cliquez sur chacune de nos valeurs pour en savoir plus.
+  orientation: vertical
+  reverse: false
+  valeurs:
+    - title: La passion
+      description: Nous sommes passionnées par notre métier et par les voyages.
+      flip: false
+    - title: La transparence
+      description: Nous garantissons une relation claire et honnête. Pas de frais cachés.
+      flip: false
+    - title: Le partage
+      description: Nous partageons avec vous tips, bonnes adresses et recommandations.
+      flip: false
+    - title: La confiance
+      description: Nous nous occupons de l'organisation de votre voyage comme s'il s'agissait du nôtre.
+      flip: false
+    - title: La personnalisation
+      description: "Notre objectif : vous concevoir un voyage sur mesure, adapté à vos envies et votre budget."
+      flip: false
+    - title: La sérénité
+      description: Nous simplifions votre oganisation pour que vous profitiez pleinement de votre voyage.
+      flip: false

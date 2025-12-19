@@ -37,6 +37,61 @@ const sections = ref([
           'aventure': '1 ou 2 lieux (France ou Europe)',
           'grande-aventure': '1 ou 2 lieux (hors Europe)',
         }
+      },
+      {
+        title: 'Appel',
+        tiers: {
+          'echappee': '30 mins',
+          'grande-echappee': '30 mins',
+          'horizon': '30 mins',
+          'lointain-horizon': '30 mins',
+          'aventure': '45 mins',
+          'grande-aventure': '45 mins',
+        }
+      },
+      {
+        title: 'Hébergements',
+        tiers: {
+          'echappee': '2',
+          'grande-echappee': '4',
+          'horizon': '3 par lieu',
+          'lointain-horizon': '4',
+          'aventure': '4 par lieu',
+          'grande-aventure': '4 par lieu',
+        }
+      },
+      {
+        title: 'Activités',
+        tiers: {
+          'echappee': "Jusqu'à 3",
+          'grande-echappee': "Jusqu'à 7",
+          'horizon': "Jusqu'à 7 par lieu",
+          'lointain-horizon': "Jusqu'à 7",
+          'aventure': "Jusqu'à 14 par lieu",
+          'grande-aventure':"Jusqu'à 14 par lieu",
+        }
+      },
+      {
+        title: 'Modifications',
+        tiers: {
+          'echappee': "X",
+          'grande-echappee': "X",
+          'horizon': "1 (hors destination)",
+          'lointain-horizon': "1 (hors destination)",
+          'aventure': "2 (hors destination)",
+          'grande-aventure':"2 (hors destination)",
+        }
+      },
+      {
+        title: 'Bonus',
+        tiers: {
+          'echappee': "Carnet PDF",
+          'grande-echappee': "Carnet PDF",
+          'horizon': "Carnet PDF + 10% sur votre 2ème commande",
+          'lointain-horizon': "Carnet PDF + 10% sur votre 2ème commande",
+          'aventure': "Carnet PDF + 10% sur votre 2ème commande + Google Map offert + Surprise",
+          'grande-aventure':"Carnet PDF + 10% sur votre 2ème commande + Google Map offert + Surprise",
+        }
       }
     ]
   },
